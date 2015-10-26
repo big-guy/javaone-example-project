@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'javaone.Main'
+
+description = "This is a demo application"
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+   testCompile 'junit:junit:4.12'
+}
+
+processResources {
+   expand appVersion: project.version
+}
